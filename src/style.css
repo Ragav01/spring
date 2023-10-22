@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+    *{
+        font-family: 'Open Sans', sans-serif;
+    }
+    nav,main,section{
+        @apply px-6 xl:px-0
+    }
+    section{
+    @apply max-w-screen-xl mx-auto py-10 lg:py-14 
+    }
+    h1,h2,h3,h4,h5,span{
+        font-family: 'Jost', sans-serif;
+    }
+    p{
+        @apply text-text-mute text-sm lg:text-base
+    }
+    h1{
+        @apply text-4xl lg:text-5xl leading-tight font-semibold tracking-tight 
+    }
+    h2{
+        @apply text-2xl lg:text-3xl font-semibold tracking-tight
+    }
+    h3{
+        @apply text-2xl font-semibold tracking-tight
+    }
+    h4{
+        @apply text-xl font-medium
+    }
+    input[type='text']{
+        @apply h-14 w-full px-4 md:px-8 rounded-full border placeholder:text-text-base outline-1 focus:outline-primary
+    }
+}
+
+@layer utilities{
+ .link{
+    @apply text-blue-500 font-medium underline 
+ }
+}
