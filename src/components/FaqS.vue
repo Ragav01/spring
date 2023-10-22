@@ -3,9 +3,9 @@
         <h2 class="text-center mb-10">Frequently Asked <span class="text-primary">Questions</span></h2>
         <div v-for="item in FaqList" class="py-5 space-y-3 border-b border-black">
             <!-- FAQ Question -->
-            <div @click="activeFaq(item.id)" class="flex justify-between gap-x-4 cursor-pointer">
-                <h4>{{ item.question }}</h4>
-                <span @click="activeFaq(item.id)" :class="[faqTab === item.id ?'rotate-[135deg] duration-300': '-rotate-45']" class="block h-3 w-3 cursor-pointer border-2 border-t-0 border-r-0 border-primary"></span>
+            <div @click="activeFaq(item.id)" class="relative flex justify-between gap-x-4 cursor-pointer">
+                <h4 class="max-w-[90%]">{{ item.question }}</h4>
+                <span @click="activeFaq(item.id)" :class="[faqTab === item.id ?'rotate-[135deg] duration-300': '-rotate-45']" class="block h-3 w-3 mt-1.5 cursor-pointer border-2 border-t-0 border-r-0 absolute right-0  z-10 border-primary"></span>
             </div>
             <!-- FAQ Answer -->
             <p :class="[faqTab === item.id ?'': 'hidden']">

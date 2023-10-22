@@ -45,9 +45,9 @@
                 <div v-for="item in tabList" class="py-6 font-normal cursor-pointer duration-300 border-b last:border-0">
                     <div class="flex justify-between items-center">
                         <h4 :class="[Tab === item.id ?'font-semibold': 'font-normal']">{{ item.title }}</h4>
-                        <button class="p-3" @click="activeTab(item.id)">
+                        <span class="p-3" @click="activeTab(item.id)">
                             <svg :class="[Tab === item.id ?'rotate-45  duration-200': '']" width="16" height="16" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M6 1L6 11" stroke="#11A404" stroke-width="2" stroke-linecap="round"/> <path d="M11 6L1 6" stroke="#11A404" stroke-width="2" stroke-linecap="round"/> </svg>
-                        </button>
+                        </span>
                     </div>
                     <div class="py-4 space-y-5" :class="[Tab === item.id ?'block': 'hidden']">
                         <p>{{ item.description }}</p>

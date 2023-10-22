@@ -8,6 +8,7 @@
 @layer base{
     *{
         font-family: 'Open Sans', sans-serif;
+        -webkit-tap-highlight-color: transparent;
     }
     nav,main,section{
         @apply px-6 xl:px-0
