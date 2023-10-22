@@ -22,7 +22,7 @@
       <!-- Navigation Links -->
       <ul  class="md:flex md:items-center gap-x-8 md:static absolute left-0 md:w-auto w-full bg-white md:bg-transparent" 
            :class="[open ? 'block': 'hidden']">
-        <li v-for="link in Links" class="p-6 md:p-0">
+        <li v-for="link in Links" class="py-4 px-6 md:p-0 last:pb-6">
             <RouterLink :to="link.link" class="flex items-center space-x-2 font-medium text-text-base hover:text-primary">
                 <p>{{link.name}}</p>
                 <span v-if="link.dropdown">
@@ -34,12 +34,10 @@
     </nav>
 </template>
 
-<script>
+<script setup>
  import { ref } from 'vue'
  import { RouterLink } from 'vue-router'
- export default{
-   setup(){
-    let open = ref(false)
+ let open = ref(false)
     let Links = [
       {name: "Products", link: "/", dropdown: true},
       {name: "Reviews", link: "/thankyou", dropdown: false},
@@ -51,7 +49,4 @@
     function MenuOpen(){
       open.value = !open.value
     }
-    return {Links, open, MenuOpen}
-  }
- }
 </script>
